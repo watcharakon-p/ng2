@@ -1,0 +1,5 @@
+nav{background:black;color:white;padding: 15px;}
+.menu {display:flex;justify-content:flex-end;}
+.menu li {list-style: none;}
+.menu li a {color: white;margin: 0px 5px; text-decoration:none;}
+.menu li a:hover {color: #ccc;}
