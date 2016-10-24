@@ -9,25 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var peple_service_1 = require('../../services/peple/peple.service');
-var HomeComponent = (function () {
-    function HomeComponent(pepleService) {
-        this.pepleService = pepleService;
+var mock_peples_1 = require('./mock-peples');
+var PepleService = (function () {
+    function PepleService() {
     }
-    HomeComponent.prototype.ngOnInit = function () {
-        this.getPeples();
+    PepleService.prototype.getPeples = function () {
+        return mock_peples_1.PEPLES;
     };
-    HomeComponent.prototype.getPeples = function () {
-        this.peples = this.pepleService.getPeples();
-    };
-    HomeComponent = __decorate([
-        core_1.Component({
-            selector: 'app-home',
-            templateUrl: './app/components/home/home.component.html',
-            styleUrls: ['./app/components/home/home.component.css']
-        }), 
-        __metadata('design:paramtypes', [peple_service_1.PepleService])
-    ], HomeComponent);
-    return HomeComponent;
+    PepleService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], PepleService);
+    return PepleService;
 }());
-exports.HomeComponent = HomeComponent;
+exports.PepleService = PepleService;

@@ -1,1 +1,16 @@
-<h1>Home Component</h1>
+<h1>Peples List</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NickName</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let peple of peples">
+            <th>{{peple.id}}</th>
+            <th>{{peple.nicname}}</th>
+        </tr>
+    </tbody>
+</table>

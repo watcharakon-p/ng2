@@ -20,6 +20,8 @@ var head_component_1 = require('./components/layout/head/head.component');
 var home_component_1 = require('./components/home/home.component');
 var about_component_1 = require('./components/about/about.component');
 var contact_component_1 = require('./components/contact/contact.component');
+// Services
+var peple_service_1 = require('./services/peple/peple.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -37,6 +39,9 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 about_component_1.AboutComponent,
                 contact_component_1.ContactComponent,
+            ],
+            providers: [
+                peple_service_1.PepleService,
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
